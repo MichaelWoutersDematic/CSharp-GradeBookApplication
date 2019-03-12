@@ -16,7 +16,7 @@ namespace GradeBook.GradeBooks
         {
             if (Students.Count < 5)
                 throw new InvalidOperationException("Ranked grading requires at least five students.");
-            
+
 
 
             var threshold = (int)Math.Ceiling(Students.Count * 0.2);
@@ -32,7 +32,27 @@ namespace GradeBook.GradeBooks
                 return 'D';
 
             else
-                return 'F' ;
+                return 'F';
+        }
+
+        public override void CalculateStatistics()
+        {
+            if (Students.Count < 5)
+            {
+                Console.WriteLine("Ranked grading requires at least 5 students.");
+                return;
+            }
+            base.CalculateStatistics();
+
+        }
+        public override void CalculateStudentStatistics(string name)
+        {
+            if (Students.Count < 5)
+            {
+                Console.WriteLine("Ranked grading requires at least 5 students.");
+                return;
+            }
+            base.CalculateStudentStatistics(name);
         }
     }
 }
