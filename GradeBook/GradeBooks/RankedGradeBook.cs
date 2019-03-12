@@ -39,7 +39,7 @@ namespace GradeBook.GradeBooks
         {
             if (Students.Count < 5)
             {
-                Console.WriteLine("Ranked grading requires at least 5 students.");
+                Console.WriteLine("Ranked grading requires at least five students.");
                 return;
             }
             base.CalculateStatistics();
@@ -49,7 +49,7 @@ namespace GradeBook.GradeBooks
         {
             if (Students.Count < 5)
             {
-                Console.WriteLine("Ranked grading requires at least 5 students.");
+                Console.WriteLine("Ranked grading requires at least five students.");
                 return;
             }
             base.CalculateStudentStatistics(name);
